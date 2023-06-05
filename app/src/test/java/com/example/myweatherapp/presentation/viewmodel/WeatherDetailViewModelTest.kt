@@ -54,7 +54,7 @@ internal class WeatherDetailViewModelTest {
             weatherDetailViewModel.loadData(Location(10.90, 11.34))
             val dataValue = weatherDetailViewModel.weatherInfoLiveData.value
             Assert.assertEquals("London", dataValue?.cityName)
-            //
+            //Here we can assert all other variables
         }
 
 

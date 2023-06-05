@@ -1,6 +1,6 @@
 package com.example.myweatherapp.di
 
-import com.example.myweatherapp.data.WeatherService
+import com.example.myweatherapp.data.model.WeatherService
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

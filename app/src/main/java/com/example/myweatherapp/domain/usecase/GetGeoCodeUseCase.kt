@@ -3,7 +3,7 @@ package com.example.myweatherapp.domain.usecase
 import android.content.Context
 import android.content.SharedPreferences
 import com.example.myweatherapp.data.repository.WeatherRepository
-import com.example.myweatherapp.domain.Location
+import com.example.myweatherapp.domain.model.Location
 import dagger.hilt.android.qualifiers.ApplicationContext
 import javax.inject.Inject
 
@@ -13,7 +13,9 @@ class GetGeoCodeUseCase @Inject constructor(
 ) {
     //given more time we can implement shared preference read and write in
     // different module shared preference manager and inject in fragment as well as usecase
-    private val sharedPreferences: SharedPreferences = appContext.getSharedPreferences("Location", 0)
+    private val sharedPreferences: SharedPreferences =
+        appContext.getSharedPreferences("Location", 0)
+
     suspend operator fun invoke(cityName: String): Location {
         val geoCodeResponse = weatherRepository.getGeoCode(cityName)
         sharedPreferences.edit()

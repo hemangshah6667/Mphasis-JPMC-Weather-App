@@ -15,7 +15,7 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import com.bumptech.glide.Glide
 import com.example.myweatherapp.databinding.FragmentFirstBinding
-import com.example.myweatherapp.domain.Location
+import com.example.myweatherapp.domain.model.Location
 import com.example.myweatherapp.presentation.viewmodel.WeatherDetailViewModel
 import com.google.android.gms.location.FusedLocationProviderClient
 import com.google.android.gms.location.LocationServices
@@ -88,6 +88,7 @@ class WeatherDetailFragment : Fragment() {
         }
         viewModel.weatherInfoLiveData.observe(viewLifecycleOwner) {
             binding.tvWeatherDetails.text = it.cityName + " - " + it.weatherDescription
+            //i have used Glide library here to manage image related operations
             Glide.with(this).load(it.weatherIconURL).into(binding.iconWeather);
         }
         binding.buttonFirst.setOnClickListener {

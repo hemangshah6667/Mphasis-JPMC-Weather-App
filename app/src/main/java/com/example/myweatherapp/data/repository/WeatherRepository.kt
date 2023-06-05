@@ -1,10 +1,10 @@
 package com.example.myweatherapp.data.repository
 
-import com.example.myweatherapp.data.WeatherInfoResponse
-import com.example.myweatherapp.data.WeatherService
 import com.example.myweatherapp.data.model.GeoCodeResponse
+import com.example.myweatherapp.data.model.WeatherInfoResponse
+import com.example.myweatherapp.data.model.WeatherService
 import com.example.myweatherapp.domain.IWeatherRepository
-import com.example.myweatherapp.domain.Location
+import com.example.myweatherapp.domain.model.Location
 import javax.inject.Inject
 
 class WeatherRepository @Inject constructor(private val weatherService: WeatherService) :
