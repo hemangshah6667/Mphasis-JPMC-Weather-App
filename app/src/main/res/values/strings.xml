@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">My Weather App</string>
+    <string name="action_settings">Settings</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">Weather App</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Search</string>
+    <string name="previous">Previous</string>
+    <string name="search_hint_text">Enter City Name</string>
+    <string name="lorem_ipsum">
+        Lorem ipsum dolor sit amet
+    </string>
+</resources>
